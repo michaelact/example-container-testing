@@ -1,0 +1,22 @@
+schemaVersion: 2.0.0
+
+fileContentTests:
+- name: 'Ensure Debian based Image'
+  path: '/etc/os-release'
+  expectedContents: ['Debian']
+
+commandTests:
+- name: "Ensure `apt-get upgrade -y` is executed"
+  command: "bash"
+  args:
+    - '-c'
+    - |
+      apt-get update
+      apt-get -qqs upgrade
+  excludedOutput: [".*Inst.*Security.* | .*Security.*Inst.*"]
+  excludedError: [".*Inst.*Security.* | .*Security.*Inst.*"]
+
+metadataTest:
+  labels:
+    - key: 'maintainer'
+      value: 'Michael Act < michael.4ct@gmail.com >'
