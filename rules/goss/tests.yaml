@@ -1,0 +1,17 @@
+file:
+  /etc/os-release:
+    title: Ensure Non-Alpine based Image
+    exists: true
+    filetype: symlink
+    contains:
+      - '!Alpine'
+
+command:
+  upgrade-system:
+    title: Ensure `apt-get upgrade -y` is already executed
+    exit-status: 0
+    exec: |
+      apt-get -qq update;
+      apt-get -qqs upgrade | grep -Ec '.*Inst.*Security.* | .*Security.*Inst.*' || :;
+    stdout:
+      - '0'
