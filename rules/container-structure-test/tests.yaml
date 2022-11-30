@@ -1,12 +1,12 @@
 schemaVersion: 2.0.0
 
 fileContentTests:
-- name: 'Ensure Debian based Image'
+- name: 'Ensure Non-Alpine based Image'
   path: '/etc/os-release'
-  expectedContents: ['Debian']
+  excludedContents: ['Alpine']
 
 commandTests:
-- name: "Ensure `apt-get upgrade -y` is executed"
+- name: "Ensure `apt-get upgrade -y` is already executed"
   command: "bash"
   args:
     - '-c'
