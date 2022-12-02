@@ -10,6 +10,8 @@ Example of Container Testing Tools Implementation
 | **Biaya**       | Gratis                       | Gratis     | Berbayar     | Gratis         | Gratis        |
 | **Kemudahan**   | Sangat Mudah                 | Mudah      | Sedang       | Sedang         | Sedang        |
 
+Data diambil pada tanggal 30 November 2022.
+
 ## Spesifikasi
 - **Dukungan komunitas yang kuat**: Mudah untuk mengumpulkan orang-orang yang mengerti tentang kasus dan masalah yang kita hadapi ketika menggunakan alat tersebut.
 - **Aktif development**: Alat yang tidak aktif _development_, rawan menjadi gerbang masuk dari serangan keamanan.
